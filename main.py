@@ -67,3 +67,20 @@ def  cuatro():
     datos4 = [row for row in cur.fetchall()]
     miConexion.close()
     return (datos4)
+
+
+#Piloto con mayor cantidad de puntos en total, cuyo constructor sea de nacionalidad sea American o British
+@app.get("/cinco")
+def  cuatro():
+    miConexion = mysql.connector.connect( host="estacion.educatics.org",
+                                          user= 'educaics_usr_est',
+                                          passwd='F5z!xZ5jhSyg', 
+                                          db="educaics_db_estacion"  )  
+    cur = miConexion.cursor()
+    cur.execute("select  * from datos" )
+    datos4 = [row for row in cur.fetchall()]
+    miConexion.close()
+    return (datos4)
+
+
+
